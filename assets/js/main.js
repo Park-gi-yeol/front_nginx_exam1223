@@ -2,7 +2,8 @@ const boardList = document.getElementById("board-list");
 
 const getList = async () => {
   // axios문법
-  let res = await axios.get("http://localhost:8081/list");
+  // let res = await axios.get("http://localhost:8081/list");
+  let res = await axios.get("/api/board/list");
   console.log(res.data);
 
   let boards = res.data;
