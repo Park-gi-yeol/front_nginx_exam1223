@@ -17,13 +17,31 @@
           <li class="nav-item"><a href="board.html">게시판</a></li>
         </ul>
       </header>
-      <main>
-        <table id="board-list" border="1"></table>
-        <a href="boardInsert.html">게시글 작성</a>
+      <main>  
+        <table id="board-list" border="1">
+          <tr>
+            <tr>
+              <td>글제목</td>
+              <td><span id="title"></span></td>
+            </tr>
+            <tr>
+              <td>작성자</td>
+              <td><span id="writer"></span></td>
+            </tr>
+            <tr>
+              <td>내용</td>
+              <td><span id="content"></span></td>
+            </tr>
+            <tr>
+              <td>첨부파일</td>
+              <td><a id="download-link">다운로드</a></td>
+            </tr>
+          </tr>
+        </table>
       </main>
       <footer>Copyright 생성형 ai과정 all rights reserverd</footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/boardDetail.js"></script>
   </body>
 </html>
