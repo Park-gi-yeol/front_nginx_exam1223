@@ -13,7 +13,8 @@ const getBoardDetail = async () => {
 
   try {
     //게시글 번호를 Spring Boot 에 전송 ( 특정 게시글 조회 기능 -> /api/board/getDetail )
-    let res = await axios.get(`http://localhost:8081/api/board/${idx}`);
+    //let res = await axios.get(`http://localhost:8081/api/board/${idx}`); // 테스트용
+    let res = await axios.get(`/api/board/${idx}`);
     console.log(res.data);
 
     //응답받은 데이터를 화면(웹페이지)에 출력하기 위한 HTML요소객체 접근하기
@@ -30,7 +31,8 @@ const getBoardDetail = async () => {
     if (res.data.b_file_path) {
       // 파일이 있는 경우
 
-      downloadLink.href = `http://localhost:8081/api/board/${idx}/download`;
+      // downloadLink.href = `http://localhost:8081/api/board/${idx}/download`; // 테스트용
+      downloadLink.href = `/api/board/${idx}/download`;
     } else {
       //파일이 없는 경우
       downloadLink.style.display = "none";
